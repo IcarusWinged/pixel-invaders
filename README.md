@@ -1,15 +1,34 @@
-# Pixel Invaders
+<p align="center">
+  <img src="docs/icon.png" width="96" alt="Pixel Invaders icon">
+</p>
 
-A retro alien shooter that lives on your Android home screen as a resizable widget.
-Supports Android 10 and above.
+<h1 align="center">Pixel Invaders</h1>
 
-![Pixel Invaders mockup](docs/mockup.png)
+<p align="center">
+  A retro alien shooter that lives on your Android home screen as a resizable widget,<br>
+  in three themes: <b>Green phosphor</b>, <b>Amber CRT</b> and <b>Paper</b>.<br>
+  Supports Android 10 and above.
+</p>
 
-> **Heads up: AI-written and not tested on a device yet.**
-> All of the code and pixel art in this project was written by AI (Claude, by Anthropic), directed by a human.
-> It has **not been tested on a real phone yet**. The game logic has automated unit tests that pass in CI,
-> and the APK builds, but the widget itself (rendering, button taps, the background loop) has never been
-> run on a real home screen. Expect rough edges and please report bugs.
+<p align="center">
+  <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue">
+  <img alt="Android 10 and above" src="https://img.shields.io/badge/Android-10%20and%20above-3DDC84">
+  <img alt="Made by IcarusWinged with AI-written code" src="https://img.shields.io/badge/made%20by-IcarusWinged%20%2B%20AI-9b59b6">
+</p>
+
+<p align="center">
+  <img src="docs/themes.png" alt="Pixel Invaders widget in Green phosphor, Amber CRT and Paper themes">
+</p>
+
+<p align="center"><sub>Green phosphor · Amber CRT · Paper (screenshots from a real phone)</sub></p>
+
+## About this project
+
+Pixel Invaders was created and directed by [IcarusWinged](https://github.com/IcarusWinged). **The code and
+pixel art were written by AI** (Claude, by Anthropic) from IcarusWinged's brief, and the app was tested
+on a real phone: a Samsung Galaxy A6+ running Android 10. It installs, the widget runs and is playable, and the
+best score is saved. It is still a debug build that has only been tried on that one device, so other phones and
+Android versions are untested. Bug reports are welcome.
 
 ## Download
 
@@ -71,6 +90,16 @@ CI runs on every push: unit tests, then `assembleDebug`. Pushes to `main` also p
 To change the art, edit the ASCII sprites in `tools/make_assets.py`, run it, and keep
 `render/Sprites.kt` in sync (`SpriteSheetTest` fails if they drift).
 
+## Credits
+
+| | Who |
+|---|---|
+| **Idea and requirements:** a retro space shooter as a resizable, adjustable home-screen widget with a custom sprite sheet and smooth collisions | IcarusWinged |
+| **Design decisions:** controls, themes, app and widget name, in-app APK download, MIT license, going public with a clean history | IcarusWinged |
+| **Testing on a real device** (Galaxy A6+, Android 10) and the screenshots above | IcarusWinged |
+| **Repository owner and publisher** | IcarusWinged |
+| Code, pixel art, unit tests and CI, written to that brief | Claude (AI) |
+
 ## License
 
-[MIT](LICENSE). Provided as is, with no warranty. This is an untested AI-written project, so use it at your own risk.
+[MIT](LICENSE). Provided as is, with no warranty. This is an AI-written project tested on a single device, so use it at your own risk.

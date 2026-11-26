@@ -46,7 +46,7 @@ jobs:
           gh release delete latest --cleanup-tag --yes 2>/dev/null || true
           gh release create latest pixel-invaders-debug.apk --latest --target "$GITHUB_SHA" \
             --title "Pixel Invaders (latest build)" \
-            --notes "Debug APK built from $GITHUB_SHA. AI-written, not yet tested on a real device."
+            --notes "Debug APK built from $GITHUB_SHA. AI-written code; tested by the author on a Samsung Galaxy A6+ (Android 10)."
 
       - name: Upload test report
         if: always()
