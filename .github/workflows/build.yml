@@ -1,0 +1,56 @@
+name: Build APK
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write   # needed to publish the APK as a release asset
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.7"
+
+      - name: Unit tests (game engine)
+        run: gradle :app:testDebugUnitTest --no-daemon
+
+      - name: Build debug APK
+        run: gradle :app:assembleDebug --no-daemon
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: pixel-invaders-debug-apk
+          path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+
+      - name: Publish APK to the latest release
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp app/build/outputs/apk/debug/app-debug.apk pixel-invaders-debug.apk
+          gh release delete latest --cleanup-tag --yes 2>/dev/null || true
+          gh release create latest pixel-invaders-debug.apk --latest --target "$GITHUB_SHA" \
+            --title "Pixel Invaders (latest build)" \
+            --notes "Debug APK built from $GITHUB_SHA. AI-written, not yet tested on a real device."
+
+      - name: Upload test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: unit-test-report
+          path: app/build/reports/tests/testDebugUnitTest

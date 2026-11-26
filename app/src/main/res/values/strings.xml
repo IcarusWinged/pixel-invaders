@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pixel Invaders</string>
+    <string name="widget_description">Retro alien shooter. Use the buttons to move and fire.</string>
+    <string name="channel_name">Game loop</string>
+    <string name="notification_text">Pixel Invaders is running</string>
+    <string name="config_title">Pixel Invaders</string>
+    <string name="label_difficulty">Difficulty</string>
+    <string name="label_theme">Screen colours</string>
+    <string name="difficulty_easy">Easy - 5 lives, slow aliens</string>
+    <string name="difficulty_normal">Normal - 3 lives</string>
+    <string name="difficulty_hard">Hard - 2 lives, fast aliens</string>
+    <string name="theme_phosphor">Green phosphor</string>
+    <string name="theme_amber">Amber CRT</string>
+    <string name="theme_paper">Paper</string>
+    <string name="resize_hint">Long-press the widget on your home screen to resize it.</string>
+    <string name="save">Save</string>
+    <string name="widget_label">Pixel Invaders</string>
+    <string name="label_updates">Updates</string>
+    <string name="version_format">Version %1$s</string>
+    <string name="download_apk">Download latest APK</string>
+    <string name="view_releases">View releases</string>
+    <string name="no_browser">No browser found to open the link.</string>
+    <string name="btn_left">&lt;</string>
+    <string name="btn_fire">FIRE</string>
+    <string name="btn_right">&gt;</string>
+</resources>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/config_title"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/label_difficulty"
+            android:textSize="14sp" />
+
+        <RadioGroup
+            android:id="@+id/group_difficulty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/difficulty_easy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/difficulty_easy" />
+
+            <RadioButton
+                android:id="@+id/difficulty_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/difficulty_normal" />
+
+            <RadioButton
+                android:id="@+id/difficulty_hard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/difficulty_hard" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/label_theme"
+            android:textSize="14sp" />
+
+        <RadioGroup
+            android:id="@+id/group_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/theme_phosphor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theme_phosphor" />
+
+            <RadioButton
+                android:id="@+id/theme_amber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theme_amber" />
+
+            <RadioButton
+                android:id="@+id/theme_paper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theme_paper" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/resize_hint"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/label_updates"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/text_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/button_download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/download_apk" />
+
+        <Button
+            android:id="@+id/button_releases"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/view_releases" />
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/save" />
+    </LinearLayout>
+</ScrollView>
